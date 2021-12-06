@@ -6,7 +6,7 @@ const testAccessibility = async (e) => {
     alert("Please add a url");
   } else {
     setLoading();
-    const response = await fetch(`http://localhost:8333/api/test?url=${url}`);
+    const response = await fetch(`/api/test?url=${url}`);
     if (response.status !== 200) {
       setLoading(false);
       alert("Something went wrong");

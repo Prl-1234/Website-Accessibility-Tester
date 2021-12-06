@@ -14,7 +14,7 @@ app.use(cors(corsOptions));
 
 app.use(express.static('public'));
 
-app.get("http://localhost:8333/api/test", async (req, res) => {
+app.get("/api/test", async (req, res) => {
   //alert("hih");
   if (!req.query.url) {
     res.status(400).json({ error: "url is required" });
